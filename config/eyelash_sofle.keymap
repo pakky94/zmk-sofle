@@ -177,16 +177,17 @@
                 lower_layer {
                         display-name = "LOW";
                         bindings = <
-&trans  &trans   &trans    &trans  &trans  &trans    &trans  &trans   &trans   &trans   &trans   &trans     &trans
-&trans  &kp INS  &trans    &trans  &trans  &trans    &trans  &kp FSLH &kp N7   &kp N8   &kp N9   &kp MINUS  &trans
-&trans  &kp ESC  &kp TAB   &trans  &trans  &trans    &trans  &kp STAR &kp N4   &kp N5   &kp N6   &kp PLUS   &trans
-&trans  &kp DEL  &kp RALT  &caps_word  &trans  &trans    &trans  &kp DOT  &kp N1   &kp N2   &kp N3   &kp RET    &trans
-&trans  &trans   &trans    &trans  &trans  &trans    &trans  &trans   &kp N0  &trans  &trans  &trans
+&trans  &trans   &trans    &trans     &trans  &trans    &mmv MOVE_UP     &trans   &trans   &trans   &trans   &trans     &trans
+&trans  &kp INS  &trans    &trans     &trans  &trans    &mmv MOVE_DOWN   &kp FSLH &kp N7   &kp N8   &kp N9   &kp MINUS  &trans
+&trans  &kp ESC  &kp TAB   &trans     &trans  &trans    &mmv MOVE_LEFT   &kp STAR &kp N4   &kp N5   &kp N6   &kp PLUS   &trans
+&trans  &kp DEL  &kp RALT  &caps_word &trans  &trans    &mmv MOVE_RIGHT  &kp DOT  &kp N1   &kp N2   &kp N3   &kp RET    &trans
+&trans  &trans   &trans    &trans     &trans  &trans    &mkp LCLK        &trans   &kp N0  &trans  &trans  &trans
 //   &trans   &kp INS  &trans   &trans   &trans   &trans        &kp FSLH &kp N7   &kp N8   &kp N9   &kp MINUS &trans
 //   &trans   &kp ESC  &kp TAB  &trans   &trans   &trans        &kp STAR &kp N4   &kp N5   &kp N6   &kp PLUS  &trans
 //   &trans   &kp DEL  &kp RALT &caps_word &trans &trans        &kp DOT  &kp N1   &kp N2   &kp N3   &kp RET   &trans
 //                              &trans   &trans   &trans        &trans   &kp N0   &trans
                         >;
+                        sensor-bindings = <&scroll_encoder>;
                 };
 
                 raise_layer {
@@ -202,6 +203,7 @@
 //   &trans  &trans    &kp RALT  &kp LBKT &kp RBKT &trans        &kp TILDE &kp EXCL &kp AT    &kp HASH  &kp DQT   &trans
 //                              &trans   &trans   &trans        &trans   &trans   &trans
                         >;
+                        sensor-bindings = <&scroll_encoder>;
                 };
 
                 func_layer {
@@ -217,6 +219,7 @@
 //   &trans  &trans    &trans &kp C_AC_BACK &kp C_AC_FORWARD &kp K_APP   &trans   &kp F1   &kp F2   &kp F3   &kp F12  &trans
 //                              &trans   &trans    &trans      &trans   &trans   &trans
                         >;
+                        sensor-bindings = <&scroll_encoder>;
                 };
 
                 gamelo_layer {
@@ -252,15 +255,11 @@
                 numpad_layer {
                         display-name = "NUM";
                         bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-//   &trans    &kp ESC   &trans    &kp UP    &trans     &trans          &kp FSLH  &kp N7    &kp N8    &kp N9    &kp MINUS &trans
-//   &trans    &kp TAB   &kp LEFT  &kp DOWN  &kp RIGHT  &trans          &kp STAR  &kp N4    &kp N5    &kp N6    &kp PLUS  &trans
-//   &trans    &trans    &trans    &trans    &trans     &trans          &kp DOT   &kp N1    &kp N2    &kp N3    &kp RET   &trans
-//                                 &trans    &kp BSPC   &trans          &trans    &kp N0    &trans
+&trans  &trans  &trans   &trans   &trans    &trans    &trans  &trans   &trans  &trans  &trans  &trans    &trans
+&trans  &kp ESC &trans   &kp UP   &trans    &trans    &trans  &kp FSLH &kp N7  &kp N8  &kp N9  &kp MINUS &trans
+&trans  &kp TAB &kp LEFT &kp DOWN &kp RIGHT &trans    &trans  &kp STAR &kp N4  &kp N5  &kp N6  &kp PLUS  &trans
+&trans  &trans  &trans   &trans   &trans    &trans    &trans  &kp DOT  &kp N1  &kp N2  &kp N3  &kp RET   &trans
+&trans  &trans  &trans   &trans   &kp BSPC  &trans    &trans  &trans   &kp N0  &trans  &trans  &trans
                         >;
                 };
 

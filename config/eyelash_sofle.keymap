@@ -138,6 +138,7 @@
 //&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 //            >;
 //        };
+
                 default_layer {
                         display-name = "COLDH";
                         bindings = <
@@ -177,11 +178,11 @@
                 lower_layer {
                         display-name = "LOW";
                         bindings = <
-&trans  &trans   &trans    &trans     &trans  &trans    &mmv MOVE_UP     &trans   &trans   &trans   &trans   &trans     &trans
-&trans  &kp INS  &trans    &trans     &trans  &trans    &mmv MOVE_DOWN   &kp FSLH &kp N7   &kp N8   &kp N9   &kp MINUS  &trans
-&trans  &kp ESC  &kp TAB   &trans     &trans  &trans    &mmv MOVE_LEFT   &kp STAR &kp N4   &kp N5   &kp N6   &kp PLUS   &trans
-&trans  &kp DEL  &kp RALT  &caps_word &trans  &trans    &mmv MOVE_RIGHT  &kp DOT  &kp N1   &kp N2   &kp N3   &kp RET    &trans
-&trans  &trans   &trans    &trans     &trans  &trans    &mkp LCLK        &trans   &kp N0  &trans  &trans  &trans
+&trans    &trans    &trans    &trans     &trans  &trans    &mmv MOVE_UP     &trans   &trans   &trans   &trans   &trans     &trans
+&trans    &kp INS   &trans    &trans     &trans  &trans    &mmv MOVE_DOWN   &kp FSLH &kp N7   &kp N8   &kp N9   &kp MINUS  &trans
+&trans    &kp ESC   &kp TAB   &trans     &trans  &trans    &mmv MOVE_LEFT   &kp STAR &kp N4   &kp N5   &kp N6   &kp PLUS   &trans
+&trans    &kp DEL   &kp RALT  &caps_word &trans  &trans    &mmv MOVE_RIGHT  &kp DOT  &kp N1   &kp N2   &kp N3   &kp RET    &trans
+&mkp RCLK &mkp LCLK &trans    &trans     &trans  &trans    &mkp LCLK        &trans   &kp N0  &trans  &trans  &trans
 //   &trans   &kp INS  &trans   &trans   &trans   &trans        &kp FSLH &kp N7   &kp N8   &kp N9   &kp MINUS &trans
 //   &trans   &kp ESC  &kp TAB  &trans   &trans   &trans        &kp STAR &kp N4   &kp N5   &kp N6   &kp PLUS  &trans
 //   &trans   &kp DEL  &kp RALT &caps_word &trans &trans        &kp DOT  &kp N1   &kp N2   &kp N3   &kp RET   &trans
@@ -225,30 +226,22 @@
                 gamelo_layer {
                         display-name = "GAMEL";
                         bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-//   &kp TAB   &kp Q   &kp W   &kp E   &kp R   &kp T         &trans  &trans  &trans  &trans  &trans  &trans
-//   &kp LSHFT &kp A   &kp S   &kp D   &kp F   &sl L_GAMEHI  &trans  &trans  &trans  &trans  &trans  &trans
-//   &kp LALT  &kp Z   &kp X   &kp C   &kp V   &kp B         &trans  &trans  &trans  &trans  &trans  &trans
-//                    &trans   &kp LCTRL   &kp SPACE         &trans  &trans  &trans
+&kp ESC    &kp N1       &kp N2   &kp N3       &kp N4     &kp N5       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB    &kp Q        &kp W    &kp E        &kp R      &kp T        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp A        &kp S    &kp D        &kp F      &kp G        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LALT   &kp Z        &kp X    &kp C        &kp V      &kp B        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &sl L_GAMEHI &trans   &sl L_GAMEHI &kp LCTRL  &kp SPACE    &trans  &trans  &trans  &trans  &trans  &trans
                         >;
                 };
 
                 gamehi_layer {
                         display-name = "GAMEH";
                         bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-//   &kp ESC   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5          &trans  &trans  &trans  &trans  &trans  &trans
-//   &trans    &trans  &kp N   &kp Y   &kp H   &kp G           &trans  &trans  &trans  &trans  &trans  &trans
-//   &trans    &trans  &trans  &trans  &kp N7  &kp N6          &trans  &trans  &trans  &trans  &trans  &trans
-//                           &trans  &trans  &trans          &trans  &trans  &trans
+&kp ESC   &kp N6    &kp N7  &kp N8    &kp N9  &kp N0    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans    &kp P     &kp O   &kp I     &kp U   &kp Y     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans    &kp SEMI  &kp L   &kp K     &kp J   &kp H     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans    &kp FSLH  &kp DOT &kp COMMA &kp M   &kp N     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans    &trans    &trans  &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         >;
                 };
 
